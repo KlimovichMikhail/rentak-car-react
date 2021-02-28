@@ -1,0 +1,71 @@
+.car {
+  width: 350px;
+  height: auto;
+  background-color: #f9f9f9;
+  float: left;
+  margin: 10px 15px 15px 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+.content {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content img {
+  height: 250px;
+  width: 100%;
+}
+.bottom-info {
+  flex-grow: 1;
+  padding: 20px 25px;
+  text-align: center;
+}
+.w-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+a {
+  cursor: pointer;
+  position: relative;
+}
+hr {
+  border: none;
+  background-color: rgba(79, 128, 0, 0.623);
+  color: black;
+  height: 2px;
+}
+.description {
+  padding-top: 20px;
+  font-weight: bold;
+  line-height: 12px;
+  color: #909090;
+}
+.price {
+  font-size: 18px;
+}
+.price-usd {
+  font-weight: bold;
+}
+.button-order {
+  margin-top: 10px;
+  padding:14px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  text-align: center;
+  background-color: blue;
+  position: relative;
+  text-shadow: 1px 1px 1px rgb(255 255 255 / 80%);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 30%);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-block {
+  color: white;
+  text-decoration: none;
+}
