@@ -1,39 +1,52 @@
 import "../styles/Car.css";
-import audi from "../Image/Audi A7.png";
 
-function CarAudi() {
+
+function Car({
+    title,
+    image,
+    priceUsd1,
+    priceByn1,
+    priceUsd2,
+    priceByn2,
+    priceUsd3,
+    priceByn3,
+    priceUsd4,
+    priceByn4,
+    priceUsd5,
+    priceByn5
+}) {
   return (
     <div className="car content">
-      <img src={audi} alt="Audi" />
+      <img src={image} alt="Audi" />
       <div className="bottom-info">
         <div className="w-name">
-          <span>Audi A7</span>
+          <span>{title}</span>
           <hr />
         </div>
         <div className="description">1 сутки</div>
         <div className="price">
-          <span className="price-usd">100 USD</span>
-          <span className="price-byn"> ≈ 260 BYN</span>
+          <span className="price-usd">{priceUsd1}</span>
+          <span className="price-byn"> ≈ {priceByn1}</span>
         </div>
         <div className="description">2-3 сутки</div>
         <div className="price">
-          <span className="price-usd">90 USD</span>
-          <span className="price-byn"> ≈ 235 BYN</span>
+          <span className="price-usd">{priceUsd2}</span>
+          <span className="price-byn"> ≈ {priceByn2}</span>
         </div>
         <div className="description">4-7 сутки</div>
         <div className="price">
-          <span className="price-usd">80 USD</span>
-          <span className="price-byn"> ≈ 210 BYN</span>
+          <span className="price-usd">{priceUsd3}</span>
+          <span className="price-byn"> ≈ {priceByn3}</span>
         </div>
         <div className="description">8-15 сутки</div>
         <div className="price">
-          <span className="price-usd">70 USD</span>
-          <span className="price-byn"> ≈ 180 BYN</span>
+          <span className="price-usd">{priceUsd4}</span>
+          <span className="price-byn"> ≈ {priceByn4}</span>
         </div>
         <div className="description">16-30 сутки</div>
         <div className="price">
-          <span className="price-usd">60 USD</span>
-          <span className="price-byn"> ≈ 155 BYN</span>
+          <span className="price-usd">{priceUsd5}</span>
+          <span className="price-byn"> ≈ {priceByn5}</span>
         </div>
         <div className="button-order">
           <a href="/brest/catalog" className="button-block">
@@ -44,5 +57,4 @@ function CarAudi() {
     </div>
   );
 }
-
-export default CarAudi;
+export default Car;
