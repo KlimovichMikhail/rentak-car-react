@@ -1,10 +1,10 @@
 import React from "react";
 import Home from "./Component/Home";
-import "./styles/App.css";
+import styles from "./styles/App.module.scss";
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Home />
     </div>
   );
