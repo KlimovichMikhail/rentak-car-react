@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import state from "./Redux/state";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App cars={state.cars}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

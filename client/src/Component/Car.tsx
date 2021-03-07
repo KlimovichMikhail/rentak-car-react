@@ -1,4 +1,5 @@
-import "../styles/Car.scss";
+import styles from "../Styles/Car.module.scss";
+import ListPriceDays from "./ListPriceDays";
 export interface CarProps {
   title?: string;
   image?: string;
@@ -29,40 +30,34 @@ function Car({
   priceByn5
 }: CarProps) {
   return (
-    <div className="car content">
+    <div className={styles.car}>
       <img src={image} alt="Audi" />
-      <div className="bottom">
-        <div className="name">
+      <div className={styles.bottom}>
+        <div className={styles.name}>
           <span>{title}</span>
           <hr />
         </div>
-        <div className="description">1 сутки</div>
-        <div className="price">
-          <span className="price-usd">{priceUsd1} USD</span>
-          <span className="price-byn"> ≈ {priceByn1} BYN</span>
+        <div className={styles.tabs}>
+          <div className={styles.tab}>
+            <a className={styles.tabDays}>Посуточная</a>
+          </div>
+          <div className={styles.tab}>
+            <a className={styles.tabHours}>Почасовая</a>
+          </div>
         </div>
-        <div className="description">2-3 сутки</div>
-        <div className="price">
-          <span className="price-usd">{priceUsd2} USD</span>
-          <span className="price-byn"> ≈ {priceByn2} BYN</span>
-        </div>
-        <div className="description">4-7 сутки</div>
-        <div className="price">
-          <span className="price-usd">{priceUsd3} USD</span>
-          <span className="price-byn"> ≈ {priceByn3} BYN</span>
-        </div>
-        <div className="description">8-15 сутки</div>
-        <div className="price">
-          <span className="price-usd">{priceUsd4} USD</span>
-          <span className="price-byn"> ≈ {priceByn4} BYN</span>
-        </div>
-        <div className="description">16-30 сутки</div>
-        <div className="price">
-          <span className="price-usd">{priceUsd5} USD</span>
-          <span className="price-byn"> ≈ {priceByn5} BYN</span>
-        </div>
-        <div className="buttonOrder">
-          <a href="/brest/catalog" className="buttonBlock">
+        <ListPriceDays
+        priceUsd1={priceUsd1}
+        priceByn1={priceByn1}
+        priceUsd2={priceUsd2}
+        priceByn2={priceByn2}
+        priceUsd3={priceUsd3}
+        priceByn3={priceByn3}
+        priceUsd4={priceUsd4}
+        priceByn4={priceByn4}
+        priceUsd5={priceUsd5}
+        priceByn5={priceByn5}/>
+        <div className={styles.buttonOrder}>
+          <a href="/brest/catalog" className={styles.buttonBlock}>
             Заказать
           </a>
         </div>

@@ -9,17 +9,17 @@
   border-radius: 0 0 8px 8px;
   position: relative;
 }
-.content {
+
+img {
+  height: 250px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.content img {
-  height: 250px;
-  width: 100%;
-}
+
 .bottom {
   flex-grow: 1;
   padding: 20px 25px;
@@ -47,9 +47,10 @@ hr {
 }
 .price {
   font-size: 18px;
-}
-.pric-usd {
-  font-weight: bold;
+
+  .priceUsd {
+    font-weight: bold;
+  }
 }
 .buttonOrder {
   margin-top: 10px;
@@ -68,4 +69,36 @@ hr {
 .buttonBlock {
   color: white;
   text-decoration: none;
+}
+.tabs {
+  margin-right: 18px;
+  margin-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 15px;
+}
+.tabDays {
+  text-shadow: none;
+
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.tabHours {
+  text-shadow: none;
+
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.tab {
+  border-radius: 5px;
+  font-size: 17px;
+  padding-right: 8px;
+  padding-left: 8px;
+  float: left;
+  text-align: center;
+  color: black;
+  border-radius: 8px;
+}
+.tab:hover {
+  background-color: rgb(93, 122, 89);
 }

@@ -1,11 +1,24 @@
 import React from "react";
 import Home from "./Component/Home";
-import styles from "./styles/App.module.scss";
+import styles from "./Styles/App.module.scss";
 
-function App() {
+type cars = {
+  id: number;
+  title: string;
+  image: string;
+  priceUsd: Array<number>;
+  priceByn: Array<number>;
+};
+export interface AppProps {
+	cars: cars[],
+	
+}
+function App({
+  cars
+}:AppProps) {
   return (
     <div className={styles.App}>
-      <Home />
+      <Home cars={cars}/>
     </div>
   );
 }
