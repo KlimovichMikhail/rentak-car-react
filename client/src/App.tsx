@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./Component/Home";
 import styles from "./Styles/App.module.scss";
 
@@ -9,4 +8,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default App
