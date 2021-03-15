@@ -1,7 +1,5 @@
-/* eslint-disable import/no-anonymous-default-export */
-
-export default function() {
-  return [
+export const initialState = {
+  cars: [
     {
       id: 1,
       title: "Audi A7",
@@ -30,5 +28,10 @@ export default function() {
       priceUsd: [40, 35, 30, 25, 20],
       priceByn: [105, 90, 80, 65, 50]
     }
-  ];
+  ]
 }
+
+export function rootReducer(state = initialState) {
+  return state
+}
+
