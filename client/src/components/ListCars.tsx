@@ -3,6 +3,7 @@ import styles from "../styles/ListCars.module.scss";
 import Car from "./Car";
 import { connect } from "react-redux";
 class ListCars extends React.Component<any, any> {
+  
   showList() {
     return this.props.cars.map(car => {
       return (
@@ -10,8 +11,10 @@ class ListCars extends React.Component<any, any> {
           key={car.id}
           title={car.title}
           image={car.image}
-          priceUsd={car.priceUsd}
-          priceByn={car.priceByn}
+          priceDaysUsd={car.priceDaysUsd}
+          priceDaysByn={car.priceDaysByn}
+          priceHoursUsd={car.priceHoursUsd}
+          priceHoursByn={car.priceHoursByn}
         />
       );
     });
