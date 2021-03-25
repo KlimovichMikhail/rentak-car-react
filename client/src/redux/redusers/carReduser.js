@@ -37,9 +37,26 @@ export const initialState = {
       priceHoursByn: [50, 40, 25, 10]
     }
   ]
-}
+};
 
-export function rootReducer(state = initialState) {
-  return state
-}
+export function rootReducer(state = initialState, action) {
+  switch (action.type) {
+    case "GET_CARS":
+      return {
+        ...state
+      };
+    case "ADD_CARS":
+      return {
+        ...state,
+        cars: state.cars.concat(action.payload)
+      };
+    case "DELETE_CARS":
+      return {
+        ...state,
+        cars: state.cars.filter(car => car.id !== action.payload)
+      };
 
+    default:
+      return state;
+  }
+}

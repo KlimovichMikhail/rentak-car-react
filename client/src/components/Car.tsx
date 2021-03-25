@@ -2,7 +2,10 @@ import React from "react";
 import styles from "../styles/Car.module.scss";
 import ListPriceDays from "./ListPriceDays";
 import ListPriceHours from "./ListPriceHours";
+import { connect } from "react-redux";
+import { deleteCar} from "../redux/actions/carAction";
 export interface CarProps {
+  id: number;
   title: string;
   image: string;
   priceDaysUsd: Array<number>;
@@ -16,8 +19,29 @@ class Car extends React.Component<any, any> {
     super(props);
     this.handlePriceDaysClick = this.handlePriceDaysClick.bind(this);
     this.handlePriceHoursClick = this.handlePriceHoursClick.bind(this);
-    this.state = { isPriceDays: false };
+    this.state = {
+      isPriceDays: false
+    };
   }
+
+  deleteCar = id => {
+    this.clearData();
+    if (window.confirm("Are you sure?")) {
+      this.props.deleteCar(id);
+    }
+  };
+
+  clearData = () => {
+    this.setState({
+      id: 0,
+      title: "",
+      image: "",
+      priceDaysUsd: [],
+      priceDaysByn: [],
+      priceHoursUsd: [],
+      priceHoursByn: []
+    });
+  };
   handlePriceDaysClick() {
     this.setState({ isPriceDays: true });
   }
@@ -61,8 +85,18 @@ class Car extends React.Component<any, any> {
             </a>
           </div>
         </div>
+        <button>EDIT</button>
+        <button onClick={() => this.deleteCar(this.props.id)}>DELETE</button>
       </div>
     );
   }
 }
-export default Car;
+function mapStateToProps(state) {
+  return {
+    cars: state.cars
+  };
+}
+export default connect(
+  mapStateToProps,
+  { deleteCar }
+)(Car);
