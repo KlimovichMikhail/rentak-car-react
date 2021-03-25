@@ -25,23 +25,11 @@ class Car extends React.Component<any, any> {
   }
 
   deleteCar = id => {
-    this.clearData();
     if (window.confirm("Are you sure?")) {
       this.props.deleteCar(id);
     }
   };
 
-  clearData = () => {
-    this.setState({
-      id: 0,
-      title: "",
-      image: "",
-      priceDaysUsd: [],
-      priceDaysByn: [],
-      priceHoursUsd: [],
-      priceHoursByn: []
-    });
-  };
   handlePriceDaysClick() {
     this.setState({ isPriceDays: true });
   }
